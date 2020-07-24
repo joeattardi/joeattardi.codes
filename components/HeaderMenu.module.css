@@ -38,3 +38,9 @@
 .menu.open .inner:last-child {
   transform: translateY(-10px) rotate(-45deg);
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .menu .inner {
+    transition: none;
+  }
+}
