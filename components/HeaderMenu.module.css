@@ -24,7 +24,7 @@
   background: #ffffff;
   height: 5px;
   border-radius: 5px;
-  transition: all 250ms;
+  transition: all 250ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
 }
 
 .menu.open .inner:nth-child(2) {
