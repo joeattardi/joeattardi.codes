@@ -1,0 +1,14 @@
+/* https://coolors.co/5adbff-ffdd4a-fe9000-cc978e-0f1a20 */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+:root {
+  --header-background: #0f1a20;
+  --header-color: #ffffff;
+  --header-height: 3.5rem;
+}
+
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
