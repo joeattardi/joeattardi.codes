@@ -1,0 +1,40 @@
+.menu {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5px;
+  transition: all 250ms;
+  border-radius: 5px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-sizing: content-box;
+}
+
+.menu:active {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.menu .inner {
+  display: block;
+  width: 30px;
+  background: #ffffff;
+  height: 5px;
+  border-radius: 5px;
+  transition: all 250ms;
+}
+
+.menu.open .inner:nth-child(2) {
+  opacity: 0;
+}
+
+.menu.open .inner:first-child {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.menu.open .inner:last-child {
+  transform: translateY(-10px) rotate(-45deg);
+}

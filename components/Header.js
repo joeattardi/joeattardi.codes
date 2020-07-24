@@ -1,3 +1,5 @@
+import HeaderMenu from './HeaderMenu';
+
 import styles from './Header.module.css';
 
 export default function Header() {
@@ -7,6 +9,7 @@ export default function Header() {
         <img src="/joe-memoji.jpg" />
       </div>
       <h1>Joe Attardi</h1>
+      <HeaderMenu />
     </header>
   );
 }
