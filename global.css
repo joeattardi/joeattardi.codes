@@ -6,6 +6,9 @@
   --header-background: #0f1a20;
   --header-color: #ffffff;
   --header-height: 3.5rem;
+
+  --nav-hover-background: #ffdd4a;
+  --nav-hover-color: #000000;
 }
 
 body {
