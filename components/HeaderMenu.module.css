@@ -1,4 +1,5 @@
 .menu {
+  --transition-time: 125ms;
   width: 30px;
   height: 30px;
   display: flex;
@@ -12,6 +13,7 @@
   outline: none;
   cursor: pointer;
   box-sizing: content-box;
+  position: relative;
 }
 
 .menu:active {
@@ -24,7 +26,17 @@
   background: #ffffff;
   height: 5px;
   border-radius: 5px;
-  transition: all 250ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  top: 0;
+  transition-property: transform, top;
+  transition-duration: var(--transition-time), var(--transition-time);
+  transition-delay: 0ms, var(--transition-time);
+  position: relative;
+}
+
+.menu .inner:nth-child(2) {
+  transition-property: opacity;
+  transition-duration: var(--transition-time);
+  transition-delay: 0ms;
 }
 
 .menu.open .inner:nth-child(2) {
@@ -32,11 +44,15 @@
 }
 
 .menu.open .inner:first-child {
-  transform: translateY(10px) rotate(45deg);
+  top: 10px;
+  transform: rotate(45deg);
+  transition-property: top, transform;
 }
 
 .menu.open .inner:last-child {
-  transform: translateY(-10px) rotate(-45deg);
+  top: -10px;
+  transform: rotate(-45deg);
+  transition-property: top, transform;
 }
 
 @media (prefers-reduced-motion: reduce) {
