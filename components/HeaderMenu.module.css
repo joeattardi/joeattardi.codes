@@ -1,4 +1,4 @@
-.menu {
+.trigger {
   --transition-time: 125ms;
   width: 30px;
   height: 30px;
@@ -16,11 +16,11 @@
   position: relative;
 }
 
-.menu:active {
+.trigger:active {
   background: rgba(255, 255, 255, 0.25);
 }
 
-.menu .inner {
+.trigger .inner {
   display: block;
   width: 30px;
   background: #ffffff;
@@ -33,30 +33,73 @@
   position: relative;
 }
 
-.menu .inner:nth-child(2) {
+.trigger .inner:nth-child(2) {
   transition-property: opacity;
   transition-duration: var(--transition-time);
   transition-delay: 0ms;
 }
 
-.menu.open .inner:nth-child(2) {
+.trigger.open .inner:nth-child(2) {
   opacity: 0;
 }
 
-.menu.open .inner:first-child {
+.trigger.open .inner:first-child {
   top: 10px;
   transform: rotate(45deg);
   transition-property: top, transform;
 }
 
-.menu.open .inner:last-child {
+.trigger.open .inner:last-child {
   top: -10px;
   transform: rotate(-45deg);
   transition-property: top, transform;
 }
 
+.menu {
+  background: #000000;
+  position: absolute;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  height: calc(100vh - var(--header-height));
+  pointer-events: none;
+  transform: translateY(-1rem);
+  opacity: 0;
+  transition: all 250ms ease-in-out;
+}
+
+.menu.open {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.menu ul {
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu ul li a {
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+  text-decoration: none;
+  transition: background 150ms;
+}
+
+.menu ul li a:active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .menu .inner {
+  .trigger .inner {
     transition: none;
   }
 }

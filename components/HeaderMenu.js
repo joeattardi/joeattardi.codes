@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Link from 'next/link';
 
 import classNames from 'classnames';
 
@@ -11,16 +12,30 @@ export default function HeaderMenu() {
     setOpen(!isOpen);
   }
 
+  const buttonClasses = classNames({
+    [styles.trigger]: true,
+    [styles.open]: isOpen
+  });
+
   const menuClasses = classNames({
     [styles.menu]: true,
     [styles.open]: isOpen
   });
 
   return (
-    <button className={menuClasses} onClick={toggleMenu}>
-      <span className={styles.inner}></span>
-      <span className={styles.inner}></span>
-      <span className={styles.inner}></span>
-    </button>
-  )
+    <>
+      <button className={buttonClasses} onClick={toggleMenu}>
+        <span className={styles.inner}></span>
+        <span className={styles.inner}></span>
+        <span className={styles.inner}></span>
+      </button>
+      <nav className={menuClasses}>
+        <ul>
+          <li><Link href="/blog"><a>Blog</a></Link></li>
+          <li><Link href="/books"><a>Books</a></Link></li>
+          <li><Link href="/projects"><a>Projects</a></Link></li>
+        </ul>
+      </nav>
+    </>
+  );
 }
