@@ -29,7 +29,7 @@ export default function Layout({ children }) {
         <link rel="manifest" href="/site.webmanifest"></link>
       </Head>
       <Header />
-      {children}
+      <main>{children}</main>
     </div>
   );
 }

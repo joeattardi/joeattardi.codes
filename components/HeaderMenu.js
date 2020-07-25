@@ -24,7 +24,7 @@ export default function HeaderMenu() {
 
   return (
     <>
-      <button className={buttonClasses} onClick={toggleMenu}>
+      <button className={buttonClasses} aria-label="Menu" onClick={toggleMenu}>
         <span className={styles.inner}></span>
         <span className={styles.inner}></span>
         <span className={styles.inner}></span>
