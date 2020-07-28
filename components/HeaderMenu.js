@@ -34,6 +34,7 @@ export default function HeaderMenu() {
           <li><Link href="/blog"><a>Blog</a></Link></li>
           <li><Link href="/books"><a>Books</a></Link></li>
           <li><Link href="/projects"><a>Projects</a></Link></li>
+          <li><Link href="/uses"><a>Uses</a></Link></li>
         </ul>
       </nav>
     </>

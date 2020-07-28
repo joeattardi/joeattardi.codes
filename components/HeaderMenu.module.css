@@ -158,6 +158,10 @@
     animation-delay: 400ms;
   }
 
+  .menu ul li:nth-child(4) {
+    animation-delay: 500ms;
+  }
+
   .menu ul li a {
     font-size: 1.2rem;
     font-weight: bold;
