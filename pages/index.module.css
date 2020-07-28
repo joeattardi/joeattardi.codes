@@ -1,3 +1,90 @@
-.container img {
+@keyframes profile-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.25);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes header-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero {
+  background-image: linear-gradient(rgba(15, 26, 32, 0.95), rgba(15, 26, 32, 1)), url('/laptop-code.jpg');
+  background-position: 50%;
+  background-size: cover;
+  height: calc(100vh - var(--header-height));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  color: #ffffff;
+}
+
+.hero img {
+  max-width: 40%;
   border-radius: 50%;
+  height: auto;
+  animation: profile-appear 250ms;
+  border: 5px solid #ffffff;
+}
+
+.hero h1 {
+  margin: 0;
+  margin-top: 1rem;
+  font-weight: 100;
+  animation: header-appear 250ms;
+}
+
+.hero h2 {
+  margin: 0;
+  margin-top: 0.5rem;
+  font-weight: normal;
+  animation: header-appear 250ms;
+  animation-delay: 250ms;
+  animation-fill-mode: both;
+}
+
+@media (min-width: 500px) {
+  .hero {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .hero img {
+    max-width: 200px;
+    margin-right: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero h1 {
+    animation: none;
+  }
+
+  .hero h2 {
+    animation: none;
+  }
+
+  .hero img {
+    animation: none;
+  }
 }

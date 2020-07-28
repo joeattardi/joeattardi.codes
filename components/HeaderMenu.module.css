@@ -63,6 +63,7 @@
   width: 100%;
   height: calc(100vh - var(--header-height));
   display: none;
+  z-index: 1000;
 }
 
 .menu.open {
@@ -132,7 +133,6 @@
 
   .menu {
     background: transparent;
-    pointer-events: all;
     position: static;
     height: auto;
     width: auto;
@@ -200,6 +200,10 @@
 }
 
 @media (min-width: 500px) and (prefers-reduced-motion: reduce) {
+  .menu ul li {
+    animation: none;
+  }
+
   .menu ul li a {
     animation: none;
     transition: none;
