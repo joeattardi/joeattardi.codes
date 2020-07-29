@@ -9,6 +9,9 @@
 
   --nav-hover-background: #ffdd4a;
   --nav-hover-color: #000000;
+
+  --contact-link-color: #ffffff;
+  --contact-link-hover-color: #5adbff;
 }
 
 body {

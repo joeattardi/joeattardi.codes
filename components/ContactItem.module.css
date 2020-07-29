@@ -1,0 +1,14 @@
+.contact-item {
+  font-size: 4rem;
+}
+
+.contact-item a {
+  color: var(--contact-link-color);
+  transition: all 250ms;
+  display: inline-block;
+}
+
+.contact-item a:hover {
+  color: var(--contact-link-hover-color);
+  transform: scale(1.1);
+}

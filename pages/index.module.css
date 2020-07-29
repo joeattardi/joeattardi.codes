@@ -68,6 +68,21 @@
   text-align: center;
 }
 
+.contact {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 350px) {
+  .contact {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 @media (min-width: 600px) {
   .hero {
     align-items: center;
