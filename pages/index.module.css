@@ -27,6 +27,7 @@
   background-position: 50%;
   background-size: cover;
   height: calc(100vh - var(--header-height));
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
