@@ -17,3 +17,8 @@
   font-size: 1.25rem;
   flex-grow: 1;
 }
+
+.header a {
+  color: #ffffff;
+  text-decoration: none;
+}

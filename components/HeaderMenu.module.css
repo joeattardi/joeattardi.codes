@@ -201,6 +201,10 @@
   .menu ul li a:active {
     background: var(--nav-hover-background);
   }
+
+  .menu.no-animate ul li {
+    animation: none !important;
+  }
 }
 
 @media (min-width: 500px) and (prefers-reduced-motion: reduce) {

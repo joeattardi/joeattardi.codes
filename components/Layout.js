@@ -2,11 +2,13 @@ import Head from 'next/head';
 
 import Header from './Header';
 
-export default function Layout({ children }) {
+import styles from './Layout.module.css';
+
+export default function Layout({ animate = true, title, children }) {
   return (
     <div>
       <Head>
-        <title>Joe Attardi</title>
+        <title>{title ? `${title} | ` : ''} Joe Attardi</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
         <link
@@ -28,8 +30,8 @@ export default function Layout({ children }) {
         />
         <link rel="manifest" href="/site.webmanifest"></link>
       </Head>
-      <Header />
-      <main>{children}</main>
+      <Header animate={animate} />
+      <main className={styles.main}>{children}</main>
     </div>
   );
 }

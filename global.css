@@ -12,12 +12,41 @@
 
   --contact-link-color: #ffffff;
   --contact-link-hover-color: #5adbff;
+
+  --main-background: #ffffff;
+  --main-padding: 1rem;
+
+  --content-max-width: 900px;
+
+  --link-color: #2176ff;
+  --link-underline-color: #31393c;
+
+  font-size: 20px;
 }
 
 body {
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
   background: #0f1a20;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-weight: 100;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline var(--link-underline-color);
 }
 
 * {

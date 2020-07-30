@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 import styles from './HeaderMenu.module.css';
 
-export default function HeaderMenu() {
+export default function HeaderMenu({ animate }) {
   const [isOpen, setOpen] = useState(false);
 
   function toggleMenu() {
@@ -19,6 +19,7 @@ export default function HeaderMenu() {
 
   const menuClasses = classNames({
     [styles.menu]: true,
+    [styles['no-animate']]: !animate,
     [styles.open]: isOpen
   });
 

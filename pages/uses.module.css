@@ -1,0 +1,10 @@
+.main {
+  background: #ffffff;
+  min-height: calc(100vh - var(--header-height));
+  max-width: var(--content-max-width);
+  margin: auto;
+}
+
+.main section img {
+  max-width: 100%;
+}

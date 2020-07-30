@@ -34,6 +34,7 @@
   justify-content: flex-start;
   padding: 1.5rem;
   color: #ffffff;
+  margin: calc(-1 * var(--main-padding));
 }
 
 .hero .title {
@@ -67,6 +68,7 @@
   animation: header-appear 500ms;
   animation-fill-mode: both;
   text-align: center;
+  font-size: 1.2rem;
 }
 
 .contact {
