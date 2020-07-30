@@ -102,7 +102,7 @@
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 575px) {
   @keyframes show {
     from {
       opacity: 0;
