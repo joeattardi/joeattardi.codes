@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <script src="/modernizr.js" async></script>
+          <script src="/modernizr.js"></script>
         </Head>
         <body>
           <Main />

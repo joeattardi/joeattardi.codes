@@ -12,7 +12,6 @@ export default function Home() {
   const [backgroundClass, setBackgroundClass] = useState('');
 
   useEffect(() => {
-    console.log(window.Modernizr);
     if (Modernizr.webp) {
       setBackgroundClass(styles.webp);
     } else {
