@@ -21,4 +21,12 @@
 .header a {
   color: #ffffff;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.header a img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
 }

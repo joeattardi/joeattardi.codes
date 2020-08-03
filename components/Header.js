@@ -7,7 +7,7 @@ import styles from './Header.module.css';
 export default function Header({ animate }) {
   return (
     <header className={styles.header}>
-      <h1><Link href="/"><a>Joe Attardi</a></Link></h1>
+      <h1><Link href="/"><a><img src="/ja.png" /> Joe Attardi</a></Link></h1>
       <HeaderMenu animate={animate} />
     </header>
   );
