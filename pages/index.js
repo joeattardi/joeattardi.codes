@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
@@ -7,12 +9,28 @@ import Layout from '../components/Layout';
 import styles from './index.module.css';
 
 export default function Home() {
+  const [backgroundClass, setBackgroundClass] = useState('');
+
+  useEffect(() => {
+    console.log(window.Modernizr);
+    if (Modernizr.webp) {
+      setBackgroundClass(styles.webp);
+    } else {
+      setBackgroundClass(styles.jpeg);
+    }
+  }, []);
+
+  const heroClasses = [styles.hero, backgroundClass].join(' ');
+
   return (
     <Layout>
       <div className={styles.container}>
-        <div className={styles.hero}>
+        <div className={heroClasses}>
           <div className={styles.title}>
-            <img alt="My desk setup" src="/joe.jpg" />
+            <picture>
+              <source type="image/webp" srcSet="/joe.webp" />
+              <img alt="Joe Attardi" src="/joe.jpg" />
+            </picture>
             <div>
               <h1>Joe Attardi</h1>
               <h2>Full Stack Software Engineer</h2>

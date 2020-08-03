@@ -22,8 +22,16 @@
   }
 }
 
-.hero {
+.hero.jpeg {
   background-image: linear-gradient(rgba(15, 26, 32, 0.95), rgba(15, 26, 32, 1)), url('/laptop-code.jpg');
+}
+
+.hero.webp {
+  background-image: linear-gradient(rgba(15, 26, 32, 0.95), rgba(15, 26, 32, 1)), url('/laptop-code.webp');
+}
+
+.hero {
+  background-image: linear-gradient(rgba(15, 26, 32, 0.95), rgba(15, 26, 32, 1));
   background-position: 50%;
   background-size: cover;
   height: calc(100vh - var(--header-height));
