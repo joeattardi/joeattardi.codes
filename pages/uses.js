@@ -15,7 +15,10 @@ export default function UsesPage() {
 
         <h2>Computer &amp; Peripherals</h2>
         <section>
-          <img src="/desk-setup.jpg" />
+          <picture>
+            <source type="image/webp" srcSet="/desk-setup.webp" />
+            <img alt="Desk setup" src="/desk-setup.jpg" />
+          </picture>
 
           <p>
             For my main computer, I have a 2019 16-inch MacBook Pro. It's on my
