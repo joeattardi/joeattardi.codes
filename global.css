@@ -21,6 +21,10 @@
   --link-color: #2176ff;
   --link-underline-color: #31393c;
 
+  --call-to-action-background: #5adbff;
+  --call-to-action-border: #03c8ff;
+  --call-to-action-hover-background: #acedff;
+
   font-size: 20px;
 }
 
@@ -49,6 +53,32 @@ a:hover {
   text-decoration: underline var(--link-underline-color);
 }
 
+a.call-to-action {
+  background: var(--call-to-action-background);
+  color: #000000;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  margin: 0.5rem auto;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 3px solid var(--call-to-action-border);
+  text-decoration: none;
+  transition: all 250ms;
+}
+
+a.call-to-action:hover {
+  background: var(--call-to-action-hover-background);
+  border-bottom-color: var(--call-to-action-background);
+}
+
 * {
   -webkit-tap-highlight-color: transparent;
+}
+
+@media (min-width: 500px) {
+  a.call-to-action {
+    width: auto;
+  }
 }

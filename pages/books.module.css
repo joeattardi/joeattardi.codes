@@ -1,0 +1,53 @@
+.main {
+  background: #ffffff;
+  min-height: calc(100vh - var(--header-height));
+  max-width: var(--content-max-width);
+  margin: auto;
+}
+
+.main h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.book img {
+  max-width: 200px;
+}
+
+.book p {
+  margin: 0;
+}
+
+.book div {
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  .book {
+    flex-direction: row;
+  }
+
+  .book p {
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .book img {
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 900px) {
+  .book img {
+    max-width: 300px;
+  }
+}
